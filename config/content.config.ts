@@ -16,9 +16,9 @@ import { SiteConfig } from '@/lib/types';
 
 export const siteConfig: SiteConfig = {
   // ==================== BRAND & METADATA ====================
-  name: "FULU Foundation",
-  tagline: "At FULU, we believe that people should control the tech they bought and own.",
-  description: "FULU Foundation fights for consumer ownership rights in the digital age. Join us to reclaim control over the products you buy.",
+  name: "Element Foundation",
+  tagline: "At Element, we believe that people should control the tech they bought and own.",
+  description: "Element Foundation fights for consumer ownership rights in the digital age. Join us to reclaim control over the products you buy.",
   url: "https://yoursite.com", // Update with your domain
   
   // ==================== THEME COLORS ====================
@@ -47,10 +47,11 @@ export const siteConfig: SiteConfig = {
   
   // ==================== HERO SECTION ====================
   hero: {
-    headline: "At FULU, we believe that **people should control** the tech they bought and own.",
+    headline: "At Element, we believe that **people should control** the materials they use.",
     subheadline: "", // Optional subheadline
     cta: "Get Involved",
     ctaLink: "#join-movement",
+    backgroundImage: "/images/hero-bg.jpg", // Path to your background image (or remove/empty for gradient)
   },
   
   // ==================== PROBLEM/CHALLENGE SECTION ====================

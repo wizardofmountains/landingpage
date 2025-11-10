@@ -21,6 +21,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   subheadline,
   cta,
   ctaLink,
+  backgroundImage,
 }) => {
   // Parse markdown-style bold text
   const parseHeadline = (text: string) => {
@@ -35,17 +36,30 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   
   return (
     <section id={id} className="relative py-20 md:py-32 overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-accent/5 via-background to-background" />
+      {/* Background image or gradient */}
+      {backgroundImage ? (
+        <>
+          {/* Background image */}
+          <div 
+            className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url(${backgroundImage})` }}
+          />
+          {/* Dark overlay for better text readability */}
+          <div className="absolute inset-0 -z-10 bg-black/50" />
+        </>
+      ) : (
+        /* Fallback gradient if no image */
+        <div className="absolute inset-0 -z-10 bg-gradient-to-br from-accent/5 via-background to-background" />
+      )}
       
       <Container maxWidth="xl">
         <div className="flex flex-col items-center text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight max-w-4xl mb-6 leading-tight">
+          <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight max-w-4xl mb-6 leading-tight ${backgroundImage ? 'text-white drop-shadow-lg' : ''}`}>
             {parseHeadline(headline)}
           </h1>
           
           {subheadline && (
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mb-8">
+            <p className={`text-xl md:text-2xl max-w-3xl mb-8 ${backgroundImage ? 'text-white/90 drop-shadow-md' : 'text-muted-foreground'}`}>
               {subheadline}
             </p>
           )}

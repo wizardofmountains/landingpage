@@ -10,6 +10,7 @@ export interface HeroConfig {
   subheadline?: string;
   cta: string;
   ctaLink: string;
+  backgroundImage?: string; // Path to background image (e.g., "/images/hero-bg.jpg")
 }
 
 export interface ProblemExample {

@@ -28,6 +28,7 @@ export default function Home() {
           subheadline={siteConfig.hero.subheadline}
           cta={siteConfig.hero.cta}
           ctaLink={siteConfig.hero.ctaLink}
+          backgroundImage={siteConfig.hero.backgroundImage}
         />
         
         {/* Problem Section */}

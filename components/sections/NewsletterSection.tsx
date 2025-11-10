@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { NewsletterConfig } from '@/lib/types';
 import Container from '@/components/ui/Container';
 
@@ -24,8 +24,15 @@ const NewsletterSection: React.FC<NewsletterSectionProps> = ({
   description,
   klaviyoFormId = 'WRssM3', // Default form ID
 }) => {
+  // Only render the form on the client side to avoid hydration mismatch
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   return (
-    <section id={id} className="relative py-20 md:py-28 bg-muted/50">
+    <section id={id} style={{ backgroundColor: 'var(--newsletter-bg)' }}>
       <Container maxWidth="lg">
         <div className="max-w-2xl mx-auto text-center">
           {/* Optional: Add title and description above the form */}
@@ -41,9 +48,11 @@ const NewsletterSection: React.FC<NewsletterSectionProps> = ({
             </p>
           )}
           
-          {/* Klaviyo Embedded Form */}
+          {/* Klaviyo Embedded Form - Only render on client side */}
           {/* The Klaviyo SDK will automatically populate this div with your form */}
-          <div className={`klaviyo-form-${klaviyoFormId}`}></div>
+          {isMounted && (
+            <div className={`klaviyo-form-${klaviyoFormId}`}></div>
+          )}
         </div>
       </Container>
     </section>

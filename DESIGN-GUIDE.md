@@ -6,6 +6,25 @@ This guide maps every visual element to its exact location in the code, making i
 
 ---
 
+## 🆕 Important Update: Klaviyo Embedded Forms
+
+**The newsletter form is now managed in Klaviyo Dashboard!**
+
+- ✅ **No code changes needed** for form customization
+- ✅ Edit colors, fonts, button styles in Klaviyo
+- ✅ Changes appear automatically on your site
+- ✅ A/B testing and analytics included
+
+**To customize the form:**
+1. Log into [Klaviyo Dashboard](https://www.klaviyo.com)
+2. Go to **Sign-up Forms** → Find form `WRssM3` → Click **Edit**
+3. Make your changes → Save
+4. That's it! No deployment needed.
+
+For details, see [Newsletter Section](#newsletter-section) or [Recipe 8](#recipe-8-customize-newsletter-form).
+
+---
+
 ## 📋 Table of Contents
 
 1. [Quick Start](#quick-start)
@@ -457,16 +476,37 @@ const variants = {
 
 **File:** `components/sections/NewsletterSection.tsx`
 
-| Element | Line | Style |
-|---------|------|-------|
-| Background | 73 | `bg-muted/50` |
-| Max width | 74 | `max-w-2xl` (672px) |
-| Form layout | 86 | `flex-col sm:flex-row` |
-| Input height | 91 | `h-12` (48px) |
-| Input border | 91 | `border-input` |
-| Button height | 98 | `h-12` (48px) |
-| Success bg | 111 | `bg-green-50` |
-| Error bg | 117 | `bg-red-50` |
+**Note:** Now uses Klaviyo embedded form - customize in Klaviyo Dashboard!
+
+| Element | Line | Style | Customization |
+|---------|------|-------|---------------|
+| Background | 28 | `bg-muted/50` | Change Tailwind class |
+| Max width | 30 | `max-w-2xl` (672px) | Change Tailwind class |
+| Title | 33 | `text-3xl md:text-4xl lg:text-5xl` | Font sizes |
+| Description | 39 | `text-lg md:text-xl` | Font sizes |
+| **Form** | 46 | `klaviyo-form-{ID}` | **Edit in Klaviyo Dashboard** |
+
+**Form Customization:**
+- ✅ Colors, fonts, layout → Klaviyo Dashboard
+- ✅ Fields, validation, messages → Klaviyo Dashboard  
+- ✅ Button style, text → Klaviyo Dashboard
+- ✅ Success/error states → Klaviyo Dashboard
+- ℹ️ No code changes needed - all visual customization done in Klaviyo!
+
+**To customize the form:**
+1. Go to [Klaviyo Dashboard](https://www.klaviyo.com)
+2. Navigate to **Sign-up Forms**
+3. Find your form (ID: `WRssM3`)
+4. Click **Edit** → Make your changes
+5. Changes appear automatically on your site
+
+**CSS Override (Advanced):**
+If you need additional styling, add to `app/globals.css`:
+```css
+.klaviyo-form-WRssM3 {
+  /* Your custom styles */
+}
+```
 
 ### Footer
 
@@ -682,20 +722,27 @@ const variants = {
    ```
 3. Save and refresh
 
-### Recipe 8: Change Newsletter Button Color
+### Recipe 8: Customize Newsletter Form
 
-**Time: 1 minute**
+**Time: 5 minutes**
 
-If you want the newsletter button to be a different color than other buttons:
+The newsletter form is now managed entirely in Klaviyo Dashboard:
 
-1. Open `components/sections/NewsletterSection.tsx`
-2. **Line 96:** Change `variant="primary"` to:
-   ```tsx
-   <Button variant="secondary">  {/* Gray button */}
-   {/* or */}
-   <Button variant="outline">    {/* Outlined button */}
-   ```
-3. Save and refresh
+1. **Go to Klaviyo Dashboard** → [klaviyo.com](https://www.klaviyo.com)
+2. Navigate to **Sign-up Forms**
+3. Find your form (ID: `WRssM3`)
+4. Click **Edit**
+5. **Customize:**
+   - Colors and fonts
+   - Button text and style
+   - Form fields
+   - Success/error messages
+   - Layout and spacing
+6. **Save** → Changes appear automatically on your site
+
+**No code deployment needed!**
+
+**Advanced:** For CSS overrides, see [Newsletter Section](#newsletter-section) above
 
 ---
 
@@ -728,6 +775,7 @@ Quick lookup table for common changes:
 | **Content** |
 | Hero text | `content.config.ts` | 50-54 | `hero:` |
 | Mission pillars | `content.config.ts` | 75-98 | `pillars:` |
+| Newsletter form | Klaviyo Dashboard | - | Form ID: `WRssM3` |
 | Footer links | `content.config.ts` | 109-133 | `footer:` |
 
 ---
@@ -773,12 +821,17 @@ Quick lookup table for common changes:
 
 ### Newsletter Section
 
-| What You See | What It Is | File | Line |
-|--------------|------------|------|------|
-| Email input box | Form input | `NewsletterSection.tsx` | 87-95 |
-| Subscribe button | Submit button | `NewsletterSection.tsx` | 97-106 |
-| Success message | Success state | `NewsletterSection.tsx` | 110-114 |
-| Light background | Section bg | `NewsletterSection.tsx` | 73 |
+| What You See | What It Is | File | Line | How to Change |
+|--------------|------------|------|------|---------------|
+| Section background | Container bg | `NewsletterSection.tsx` | 28 | Tailwind classes |
+| Title "Sign Up..." | Section heading | `NewsletterSection.tsx` | 33 | `content.config.ts` |
+| Description text | Section description | `NewsletterSection.tsx` | 39 | `content.config.ts` |
+| **Entire Form** | Klaviyo embedded form | `NewsletterSection.tsx` | 46 | **Klaviyo Dashboard** |
+
+**Note:** The form itself (input, button, messages) is managed in Klaviyo Dashboard:
+- Go to Klaviyo → Sign-up Forms → Find `WRssM3` → Edit
+- Change colors, fonts, button text, validation, etc.
+- Changes appear automatically (no code deployment needed)
 
 ### Footer
 
@@ -982,6 +1035,18 @@ className="text-base md:text-lg lg:text-xl hover:text-accent"
 
 ---
 
-**Last Updated:** November 2025  
-**Version:** 1.0
+**Last Updated:** November 10, 2025  
+**Version:** 2.0 (Updated for Klaviyo Embedded Forms)
+
+---
+
+## 📝 Recent Updates (v2.0)
+
+### November 10, 2025
+- ✅ Updated Newsletter Section documentation for Klaviyo embedded forms
+- ✅ Added Klaviyo Dashboard customization instructions
+- ✅ Removed outdated custom form references
+- ✅ Simplified Recipe 8 for form customization
+- ✅ Updated Visual Element Finder with Klaviyo information
+- ℹ️ Form is now customized entirely in Klaviyo Dashboard (no code changes needed)
 
