@@ -1,17 +1,15 @@
 /**
- * Klaviyo API Integration (Placeholder)
+ * Klaviyo API Integration (Optional - Not Used with Embedded Forms)
  * 
- * This is a placeholder implementation for Klaviyo newsletter signup.
- * To integrate with real Klaviyo API:
+ * NOTE: This file is NOT needed if you're using Klaviyo Embedded Forms (current implementation).
+ * Embedded forms handle everything automatically via the Klaviyo SDK.
  * 
- * 1. Sign up for a Klaviyo account at https://www.klaviyo.com
- * 2. Get your API keys from Account > Settings > API Keys
- * 3. Add to .env.local:
- *    KLAVIYO_API_KEY=your_private_api_key
- *    NEXT_PUBLIC_KLAVIYO_LIST_ID=your_list_id
- * 4. Update this file with real API calls
+ * This file is kept for reference if you want to build a custom newsletter form.
  * 
- * Documentation: https://developers.klaviyo.com/en/reference/api_overview
+ * To use this implementation:
+ * 1. Switch back to custom React form in NewsletterSection.tsx
+ * 2. Add KLAVIYO_API_KEY and NEXT_PUBLIC_KLAVIYO_LIST_ID to .env.local
+ * 3. Use the /api/subscribe endpoint
  */
 
 export interface KlaviyoSubscribeParams {
@@ -25,51 +23,48 @@ export interface KlaviyoResponse {
 }
 
 /**
- * Subscribe an email to a Klaviyo list
- * This is a PLACEHOLDER - replace with real implementation
+ * Subscribe an email to a Klaviyo list via API
+ * Only needed for custom forms (not embedded forms)
  */
 export async function subscribeToNewsletter(
   params: KlaviyoSubscribeParams
 ): Promise<KlaviyoResponse> {
   const { email } = params;
   
-  // PLACEHOLDER: Simulate API call
-  await new Promise((resolve) => setTimeout(resolve, 1000));
-  
-  // PLACEHOLDER: Simulate successful response
-  console.log(`[PLACEHOLDER] Would subscribe ${email} to Klaviyo list`);
-  
-  return {
-    success: true,
-    message: "Successfully subscribed to newsletter",
-  };
-  
-  /* REAL IMPLEMENTATION EXAMPLE:
-  
   const apiKey = process.env.KLAVIYO_API_KEY;
   const listId = params.listId || process.env.NEXT_PUBLIC_KLAVIYO_LIST_ID;
   
   if (!apiKey || !listId) {
-    throw new Error("Klaviyo API key or List ID not configured");
+    throw new Error("Klaviyo API credentials not configured");
   }
   
   try {
-    const response = await fetch("https://a.klaviyo.com/api/v2/list/{LIST_ID}/subscribe", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": `Klaviyo-API-Key ${apiKey}`,
-      },
-      body: JSON.stringify({
-        profiles: [
-          {
-            email: email,
-          },
-        ],
-      }),
-    });
+    // Using Klaviyo REST API v2
+    const response = await fetch(
+      `https://a.klaviyo.com/api/v2/list/${listId}/subscribe`, 
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Klaviyo-API-Key ${apiKey}`,
+        },
+        body: JSON.stringify({
+          profiles: [
+            {
+              email: email,
+              // Optional: Add more properties
+              // $first_name: "John",
+              // $last_name: "Doe",
+              // custom_property: "value",
+            },
+          ],
+        }),
+      }
+    );
     
     if (!response.ok) {
+      const errorData = await response.json().catch(() => ({}));
+      console.error("Klaviyo API error:", errorData);
       throw new Error("Failed to subscribe");
     }
     
@@ -84,6 +79,4 @@ export async function subscribeToNewsletter(
       message: "Failed to subscribe. Please try again.",
     };
   }
-  */
 }
-

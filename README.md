@@ -44,8 +44,8 @@ A modern, customizable single-page website template built with Next.js, TypeScri
    ```
 
 3. **Run the development server**
-   ```bash
-   npm run dev
+```bash
+npm run dev
    ```
 
 4. **Open your browser**
@@ -204,20 +204,55 @@ mission: {
 
 ## 📧 Newsletter Integration
 
-### Using the Placeholder (Default)
+**📖 Full Setup Guide:** See **[KLAVIYO-SETUP.md](./KLAVIYO-SETUP.md)** for complete instructions  
+**📝 Embedded Form Guide:** See **[KLAVIYO-EMBEDDED-FORM.md](./KLAVIYO-EMBEDDED-FORM.md)** for form customization
 
-By default, the newsletter form uses a placeholder implementation that logs submissions to the console. Perfect for testing!
+### What's Included
 
-### Connecting to Klaviyo
+- ✅ **Klaviyo Tracking SDK** - Automatically tracks visitor behavior
+- ✅ **Klaviyo Embedded Form** - Form ID: `WRssM3` (customize in Klaviyo dashboard)
+- ✅ **Zero Backend Code** - Form handled entirely by Klaviyo
+- ✅ **Current Status** - Ready to use (just add your Company ID to `layout.tsx`)
 
-1. **Sign up for Klaviyo** at https://www.klaviyo.com
-2. **Get your API keys** from Account > Settings > API Keys
-3. **Create `.env.local`** in the project root:
-   ```env
-   KLAVIYO_API_KEY=your_private_api_key
-   NEXT_PUBLIC_KLAVIYO_LIST_ID=your_list_id
+### Quick Start (2 minutes)
+
+1. **Get your Klaviyo Company ID:**
+   - Sign up at [klaviyo.com](https://www.klaviyo.com) (free)
+   - Go to **Account** → **Settings** → **API Keys**
+   - Copy your **Public API Key / Company ID** (e.g., `ABC123`)
+
+2. **Update `app/layout.tsx` (line 55):**
+   ```tsx
+   // Replace TVj2zW with YOUR Company ID (both places)
+   src="https://static.klaviyo.com/onsite/js/YOUR_ID/klaviyo.js?company_id=YOUR_ID"
    ```
-4. **Update `lib/klaviyo.ts`** with the real implementation (see comments in file)
+
+3. **Publish your form in Klaviyo Dashboard:**
+   - Go to **Sign-up Forms**
+   - Find your form (ID: `WRssM3`)
+   - Click **Publish**
+
+4. **Done!** Form will appear automatically on your site.
+
+### Customize Your Form
+
+**No code needed!** Customize everything in Klaviyo Dashboard:
+- Colors and fonts
+- Button text and style
+- Fields (email, name, custom)
+- Success/error messages
+- A/B test variants
+
+Changes appear automatically on your site.
+
+### Using a Different Form
+
+Created a new form in Klaviyo? Update `config/content.config.ts`:
+```typescript
+newsletter: {
+  klaviyoFormId: "YOUR_FORM_ID", // Change this
+}
+```
 
 ### Alternative Newsletter Services
 
@@ -274,6 +309,8 @@ This template is perfect for:
 
 - **[DESIGN-GUIDE.md](./DESIGN-GUIDE.md)**: Complete visual customization reference (colors, fonts, spacing, styles)
 - **[CUSTOMIZATION.md](./CUSTOMIZATION.md)**: Step-by-step content customization guide
+- **[KLAVIYO-SETUP.md](./KLAVIYO-SETUP.md)**: Complete Klaviyo integration guide (tracking, newsletter, advanced features)
+- **[KLAVIYO-EMBEDDED-FORM.md](./KLAVIYO-EMBEDDED-FORM.md)**: Embedded form implementation and customization
 - **[content.config.ts](./config/content.config.ts)**: Configuration examples
 
 ## 🐛 Troubleshooting

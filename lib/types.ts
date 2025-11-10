@@ -38,9 +38,7 @@ export interface MissionConfig {
 export interface NewsletterConfig {
   title: string;
   description: string;
-  buttonText: string;
-  successMessage?: string;
-  errorMessage?: string;
+  klaviyoFormId?: string; // Klaviyo embedded form ID (e.g., "WRssM3")
 }
 
 export interface FooterLinkSection {

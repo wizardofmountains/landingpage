@@ -99,9 +99,7 @@ export const siteConfig: SiteConfig = {
   newsletter: {
     title: "Sign Up for Alerts",
     description: "Want to know when it's time to act? Join the movement to put power back in the hands of consumers. Sign up to get no-spam alerts about campaigns, legislation, and actions you can take to protect ownership rights.",
-    buttonText: "Subscribe",
-    successMessage: "Thank you for joining! Check your email to confirm your subscription.",
-    errorMessage: "Oops! Something went wrong. Please try again.",
+    klaviyoFormId: "WRssM3", // Your Klaviyo embedded form ID - customize form in Klaviyo dashboard
   },
   
   // ==================== FOOTER ====================

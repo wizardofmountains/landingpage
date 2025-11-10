@@ -49,9 +49,7 @@ export default function Home() {
         <NewsletterSection
           title={siteConfig.newsletter.title}
           description={siteConfig.newsletter.description}
-          buttonText={siteConfig.newsletter.buttonText}
-          successMessage={siteConfig.newsletter.successMessage}
-          errorMessage={siteConfig.newsletter.errorMessage}
+          klaviyoFormId={siteConfig.newsletter.klaviyoFormId}
         />
       </main>
       
