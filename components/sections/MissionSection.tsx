@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useMemo } from 'react';
 import Link from 'next/link';
 import { MissionConfig } from '@/lib/types';
 import Container from '@/components/ui/Container';
@@ -9,6 +9,8 @@ import IconWrapper from '@/components/ui/IconWrapper';
 import Button from '@/components/ui/Button';
 import { handleAnchorClick } from '@/lib/utils';
 import { ArrowRight } from 'lucide-react';
+
+const missionHoverPalette = ['#2EC4B6', '#FF9F1C', '#FF9F1C', '#2EC4B6'] as const;
 
 export interface MissionSectionProps extends MissionConfig {
   id?: string;
@@ -24,8 +26,17 @@ const MissionSection: React.FC<MissionSectionProps> = ({
   intro,
   pillars,
 }) => {
+  const hoverPalette = useMemo(
+    () =>
+      pillars.map(
+        (_pillar, index) =>
+          missionHoverPalette[index % missionHoverPalette.length]
+      ),
+    [pillars]
+  );
+
   return (
-    <section id={id} className="relative py-20 md:py-28 bg-background">
+    <section id={id} className="relative py-5 md:py-5 bg-background">
       <Container maxWidth="xl">
         <div className="max-w-4xl mx-auto mb-16 text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
@@ -46,15 +57,20 @@ const MissionSection: React.FC<MissionSectionProps> = ({
               key={index}
               variant="bordered"
               padding="lg"
-              className="hover:shadow-lg hover:border-accent/50 transition-all duration-300 group"
+              className="mission-card group transition-all duration-300"
+              style={
+                {
+                  '--mission-hover-color': hoverPalette[index],
+                } as React.CSSProperties
+              }
             >
               <div className="flex flex-col items-start">
                 {/* Icon */}
-                <div className="mb-4 p-3 bg-accent/10 rounded-lg group-hover:bg-accent/20 transition-colors">
+                <div className="mission-card__icon-wrapper mb-4 p-3 rounded-xl transition-colors">
                   <IconWrapper
                     name={pillar.icon}
                     size={32}
-                    className="text-accent"
+                    className="mission-card__icon"
                   />
                 </div>
                 

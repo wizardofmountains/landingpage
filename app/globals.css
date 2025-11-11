@@ -114,3 +114,37 @@ section {
     transform: translateX(8px);
   }
 }
+
+.mission-card {
+  background: #080b0c;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 1.5rem;
+  transition: border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease;
+}
+
+.mission-card:hover {
+  border-color: var(--mission-hover-color, var(--primary)) !important;
+  box-shadow: 0 26px 56px -38px rgba(0, 0, 0, 0.55);
+  box-shadow: 0 28px 60px -34px color-mix(in srgb, var(--mission-hover-color, var(--primary)) 55%, transparent);
+  transform: translateY(-6px);
+}
+
+.mission-card__icon-wrapper {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  transition: background-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.mission-card:hover .mission-card__icon-wrapper {
+  background: color-mix(in srgb, var(--mission-hover-color, var(--primary)) 18%, transparent);
+  box-shadow: 0 16px 40px -26px color-mix(in srgb, var(--mission-hover-color, var(--primary)) 45%, transparent);
+}
+
+.mission-card__icon {
+  color: #ffffff;
+  transition: color 0.35s ease;
+}
+
+.mission-card:hover .mission-card__icon {
+  color: var(--mission-hover-color, var(--primary));
+}

@@ -19,7 +19,7 @@ export interface FooterProps {
  */
 const Footer: React.FC<FooterProps> = ({ logo, siteName, sections, copyright }) => {
   return (
-    <footer className="bg-muted/30 border-t border-border">
+    <footer className="bg-[#182125]/30 border-t border-border">
       <Container maxWidth="2xl" padding>
         <div className="py-12 md:py-16">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8">

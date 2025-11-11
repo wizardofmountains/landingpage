@@ -24,10 +24,12 @@ const NewsletterSection: React.FC<NewsletterSectionProps> = ({
   description,
   klaviyoFormId = 'WRssM3', // Default form ID
 }) => {
-  // Only render the form on the client side to avoid hydration mismatch
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    // Klaviyo mutates the embedded form node before hydration completes.
+    // We defer rendering on the client to avoid hydration mismatches.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsMounted(true);
   }, []);
 
@@ -47,13 +49,13 @@ const NewsletterSection: React.FC<NewsletterSectionProps> = ({
               {description}
             </p>
           )}
-          
-          {/* Klaviyo Embedded Form - Only render on client side */}
-          {/* The Klaviyo SDK will automatically populate this div with your form */}
+
           {isMounted && (
             <>
+              {/* Klaviyo Embedded Form - rendered on client only */}
+              {/* The Klaviyo SDK will automatically populate this div with your form */}
               <div className={`klaviyo-form-${klaviyoFormId}`}></div>
-              
+
               {/* Required field notice */}
               <p className="mt-4 text-sm text-gray-400">
                 <span className="text-red-500">*</span>Please complete this field to proceed.
