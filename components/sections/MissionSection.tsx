@@ -36,7 +36,10 @@ const MissionSection: React.FC<MissionSectionProps> = ({
   );
 
   return (
-    <section id={id} className="relative py-5 md:py-5 bg-background">
+    <section
+      id={id}
+      className="relative pt-16! pb-16! md:pt-20! md:pb-20! bg-background"
+    >
       <Container maxWidth="xl">
         <div className="max-w-4xl mx-auto mb-16 text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">

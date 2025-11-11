@@ -41,13 +41,13 @@ export const siteConfig: SiteConfig = {
     { label: "About Us", href: "#about" },
     { label: "Get Involved", href: "#join-movement" },
     { label: "Contact Us", href: "#contact" },
-    { label: "Consumer Rights Wiki", href: "#" },
-    { label: "FULU Bounties", href: "#" },
-  ],
+    { label: "Material Wiki", href: "#" },
+    { label: "Community", href: "#" },
+  ],  
   
   // ==================== HERO SECTION ====================
   hero: {
-    headline: "At Element, we believe that **people should control** the materials they use.",
+    headline: "At Element, we believe that people should control the materials they use.",
     subheadline: "", // Optional subheadline
     cta: "Get Involved",
     ctaLink: "#join-movement",
@@ -71,7 +71,7 @@ export const siteConfig: SiteConfig = {
   // Describe your organization's approach with 3-4 key pillars
   mission: {
     title: "Element's Role",
-    intro: "FULU was founded to stand up to the anti-ownership agenda. We're reclaiming the idea that when you buy something, it belongs to you. Not your service provider. Not the company that made it. You.",
+    intro: "Element was founded to stand up to the anti-ownership agenda. We're reclaiming the idea that when you buy something, it belongs to you. Not your service provider. Not the company that made it. You.",
     pillars: [
       {
         title: "Expose",
@@ -116,8 +116,8 @@ export const siteConfig: SiteConfig = {
       {
         title: "Resources",
         links: [
-          { label: "Consumer Rights Wiki", href: "#" },
-          { label: "FULU Bounties", href: "#" },
+          { label: "Material Wiki", href: "#" },
+          { label: "Community", href: "#" },
         ],
       },
       {
@@ -135,7 +135,7 @@ export const siteConfig: SiteConfig = {
         ],
       },
     ],
-    copyright: "Copyright ©2025 - FULU Foundation",
+    copyright: "Copyright ©2025 - Element Foundation",
   },
 };
 
