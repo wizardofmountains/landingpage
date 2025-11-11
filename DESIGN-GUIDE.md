@@ -181,13 +181,13 @@ className="relative py-20 md:py-28 bg-black text-white"
 
 ### Font Families
 
-#### Primary Font (Geist Sans)
+#### Primary Font (Montserrat)
 **File:** `app/layout.tsx`
 
 ```typescript
-// Lines 5-8
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Lines 5-9
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
 });
 ```
@@ -195,7 +195,7 @@ const geistSans = Geist({
 **To change:**
 1. Import a different Google Font
 2. Update the variable name
-3. Update `globals.css` line 45 if needed
+3. Update `app/globals.css` line 51 if needed
 
 #### Monospace Font (Geist Mono)
 **File:** `app/layout.tsx`
@@ -1011,6 +1011,7 @@ className="text-base md:text-lg lg:text-xl hover:text-accent"
 - **[README.md](./README.md)** - Project overview and setup
 - **[CUSTOMIZATION.md](./CUSTOMIZATION.md)** - Content customization guide
 - **[config/content.config.ts](./config/content.config.ts)** - Content examples
+- **Google Analytics (gtag.js)** – Managed in `app/layout.tsx` via `next/script` with tracking ID `G-XTFY1KDWXG`. Update the `src` query parameter and `gtag('config', ...)` call to switch properties.
 
 ### External Resources
 
@@ -1062,4 +1063,7 @@ className="text-base md:text-lg lg:text-xl hover:text-accent"
 - ✅ Simplified Recipe 8 for form customization
 - ✅ Updated Visual Element Finder with Klaviyo information
 - ℹ️ Form is now customized entirely in Klaviyo Dashboard (no code changes needed)
+### November 11, 2025
+- ✅ Documented Google Analytics setup (gtag.js) with `next/script` integration in `app/layout.tsx`
+- ✅ Switched primary sans-serif font from Geist Sans to Montserrat in `app/layout.tsx` and `app/globals.css`
 

@@ -1,13 +1,8 @@
 import Script from "next/script";
 import type { Metadata } from "next";
-import { Geist, Montserrat } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/config/content.config";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -57,7 +52,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${montserrat.variable} antialiased`}
+        className={`${montserrat.variable} antialiased`}
       >
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-XTFY1KDWXG"
