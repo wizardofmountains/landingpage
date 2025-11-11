@@ -6,10 +6,12 @@ A modern, customizable single-page website template built with Next.js, TypeScri
 
 ## 🌟 Features
 
+- **Floating Menu Design**: Premium free-floating logo and navigation with glass-morphism
+- **Full-Screen Hero**: Immersive "above the fold" design with background image support
 - **Fully Customizable**: All content editable through a single configuration file
 - **Modern Stack**: Built with Next.js 15, TypeScript, and Tailwind CSS
 - **Responsive Design**: Mobile-first approach that looks great on all devices
-- **Newsletter Integration**: Email signup with validation and Klaviyo API support
+- **Newsletter Integration**: Klaviyo embedded forms with dashboard customization
 - **SEO Optimized**: Built-in metadata and Open Graph tags
 - **Accessible**: ARIA labels, semantic HTML, keyboard navigation
 - **Type Safe**: Full TypeScript support for robust development
@@ -17,11 +19,11 @@ A modern, customizable single-page website template built with Next.js, TypeScri
 
 ## 📋 Sections Included
 
-1. **Hero Section**: Bold headline with call-to-action
-2. **Problem Section**: Describe the challenge you're addressing
-3. **Mission Section**: Showcase your approach with 4 customizable pillars
-4. **Newsletter Section**: Collect email signups with validation
-5. **Header**: Responsive navigation with mobile menu
+1. **Floating Menu**: Separate floating logo and navigation elements with glass-morphism
+2. **Hero Section**: Full-screen "above the fold" design with background image
+3. **Problem Section**: Describe the challenge you're addressing
+4. **Mission Section**: Showcase your approach with 4 customizable pillars
+5. **Newsletter Section**: Klaviyo embedded form for email signups
 6. **Footer**: Multi-column footer with links
 
 ## 🚀 Quick Start

@@ -1,5 +1,7 @@
 # 🖼️ How to Add Hero Background Image
 
+> **Note:** The hero section is now a full viewport "above the fold" design that fills the entire screen height for maximum impact.
+
 ## Quick Setup (3 Steps)
 
 ### 1. **Add Your Image File**
@@ -19,9 +21,10 @@ public/
 
 **Recommended image specs:**
 - **Width:** 1920px minimum (for large screens)
-- **Height:** 1080px or more
+- **Height:** 1080px or more (full viewport height)
 - **File size:** < 500 KB (optimized for web)
-- **Aspect ratio:** 16:9 or wider
+- **Aspect ratio:** 16:9 or taller (works with portrait-oriented images)
+- **Composition:** Keep important elements centered (text overlays in center)
 
 ---
 

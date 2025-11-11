@@ -128,9 +128,13 @@ className="relative py-20 md:py-28 bg-black text-white"
 #### Hero Section
 **File:** `components/sections/HeroSection.tsx`
 
+> **Note:** Hero section is now full viewport height ("above the fold" design)
+
 | Element | Line | Class | Purpose |
 |---------|------|-------|---------|
-| Background gradient | 24 | `bg-gradient-to-br from-accent/5 via-background to-background` | Subtle gradient |
+| Full viewport height | 38 | `min-h-screen` | Fills entire screen |
+| Vertical centering | 38 | `flex items-center justify-center` | Centers content |
+| Background gradient | 52 | `bg-gradient-to-br from-accent/5 via-background to-background` | Subtle gradient |
 
 #### Mission Section
 **File:** `components/sections/MissionSection.tsx`
@@ -433,13 +437,18 @@ const variants = {
 
 **File:** `components/sections/HeroSection.tsx`
 
+> **Full viewport "above the fold" design** - fills entire screen height
+
 | Element | Line | Style |
 |---------|------|-------|
-| Section padding | 22 | `py-20 md:py-32` |
-| Background | 24 | `bg-gradient-to-br from-accent/5` |
-| Headline size | 28 | `text-4xl md:text-5xl lg:text-6xl` |
-| Max width | 28 | `max-w-4xl` (896px) |
-| Button size | 41 | `size="lg"` |
+| **Section height** | 38 | `min-h-screen` (full viewport) |
+| **Vertical centering** | 38 | `flex items-center justify-center` |
+| Container padding | 55 | `py-20` |
+| Background | 52 | `bg-gradient-to-br from-accent/5` |
+| Headline size | 57 | `text-5xl md:text-6xl lg:text-7xl` |
+| Subheadline size | 62 | `text-xl md:text-2xl lg:text-3xl` |
+| Max width | 57 | `max-w-5xl` (1024px) |
+| Button size | 68 | `size="lg"` |
 
 ### Problem Section
 
@@ -795,11 +804,15 @@ Quick lookup table for common changes:
 
 ### Hero Section
 
+> **Full-screen "above the fold" section** - first thing visitors see
+
 | What You See | What It Is | File | Line |
 |--------------|------------|------|------|
-| Big bold headline | Hero H1 | `HeroSection.tsx` | 27-30 |
-| Main CTA button | Primary button | `HeroSection.tsx` | 38-41 |
-| Gradient background | Background decoration | `HeroSection.tsx` | 24 |
+| Full-screen section | Full viewport container | `HeroSection.tsx` | 38 |
+| Big bold headline | Hero H1 (larger text) | `HeroSection.tsx` | 57-59 |
+| Main CTA button | Primary button | `HeroSection.tsx` | 67-71 |
+| Background image/gradient | Background decoration | `HeroSection.tsx` | 40-52 |
+| Centered content | Vertical alignment | `HeroSection.tsx` | 38 |
 
 ### Dark Section (The Problem)
 

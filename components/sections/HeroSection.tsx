@@ -12,7 +12,7 @@ export interface HeroSectionProps extends HeroConfig {
 }
 
 /**
- * Hero section with bold headline and CTA
+ * Full viewport "above the fold" hero section
  * Supports markdown-style bold text with **text**
  */
 const HeroSection: React.FC<HeroSectionProps> = ({
@@ -35,7 +35,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   };
   
   return (
-    <section id={id} className="relative py-20 md:py-32 overflow-hidden">
+    <section id={id} className="relative min-h-screen flex items-start justify-center overflow-hidden pt-32">
       {/* Background image or gradient */}
       {backgroundImage ? (
         <>
@@ -45,27 +45,27 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             style={{ backgroundImage: `url(${backgroundImage})` }}
           />
           {/* Dark overlay for better text readability */}
-          <div className="absolute inset-0 -z-10 bg-black/50" />
+          <div className="absolute inset-0 -z-10 bg-black/70" />
         </>
       ) : (
         /* Fallback gradient if no image */
         <div className="absolute inset-0 -z-10 bg-gradient-to-br from-accent/5 via-background to-background" />
       )}
       
-      <Container maxWidth="xl">
-        <div className="flex flex-col items-center text-center">
-          <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight max-w-4xl mb-6 leading-tight ${backgroundImage ? 'text-white drop-shadow-lg' : ''}`}>
+      <Container maxWidth="xl" className="py-20">
+        <div className="flex flex-col items-left text-left -ml-32"> {/* -ml-32 moves the text 30px to the left */}
+          <h1 className={`text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight max-w-6xl mb-8 leading-tight ${backgroundImage ? 'text-white drop-shadow-lg' : ''}`}>
             {parseHeadline(headline)}
           </h1>
           
           {subheadline && (
-            <p className={`text-xl md:text-2xl max-w-3xl mb-8 ${backgroundImage ? 'text-white/90 drop-shadow-md' : 'text-muted-foreground'}`}>
+            <p className={`text-xl md:text-2xl lg:text-3xl max-w-3xl mb-10 ${backgroundImage ? 'text-white/90 drop-shadow-md' : 'text-muted-foreground'}`}>
               {subheadline}
             </p>
           )}
           
           <Link href={ctaLink} onClick={handleAnchorClick}>
-            <Button variant="primary" size="lg" className="shadow-lg hover:shadow-xl">
+            <Button variant="primary" size="lg" className="shadow-lg hover:shadow-xl transition-all">
               {cta}
             </Button>
           </Link>
