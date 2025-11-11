@@ -12,6 +12,9 @@
   --secondary-foreground: #ffffff;
   --accent: #2ec4b6;
   --accent-foreground: #ffffff;
+  --cta: #ff9f1c;
+  --cta-foreground: #0f1517;
+  --cta-hover-foreground: #0f1517;
   
   /* Additional colors - Using dark mode colors */
   --muted: #1e293b;
@@ -78,4 +81,36 @@ h1, h2, h3, h4, h5, h6 {
 section {
   padding-top: 8rem !important;
   padding-bottom: 8rem !important;
+}
+
+.hero-cta {
+  background: var(--cta);
+  color: var(--cta-foreground);
+  box-shadow: 0 25px 60px -30px rgba(255, 159, 28, 0.55);
+  transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-cta:hover {
+  background: var(--primary);
+  color: var(--cta-hover-foreground);
+  animation: hero-cta-wiggle 0.8s ease-in-out infinite;
+  box-shadow: 0 28px 70px -32px rgba(46, 196, 182, 0.55);
+}
+
+.hero-cta .hero-cta__icon {
+  transition: transform 0.3s ease;
+}
+
+.hero-cta:hover .hero-cta__icon {
+  transform: translateX(8px);
+}
+
+@keyframes hero-cta-wiggle {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(8px);
+  }
 }

@@ -70,7 +70,7 @@ export const siteConfig: SiteConfig = {
   // ==================== MISSION/PILLARS SECTION ====================
   // Describe your organization's approach with 3-4 key pillars
   mission: {
-    title: "FULU's Role",
+    title: "Element's Role",
     intro: "FULU was founded to stand up to the anti-ownership agenda. We're reclaiming the idea that when you buy something, it belongs to you. Not your service provider. Not the company that made it. You.",
     pillars: [
       {

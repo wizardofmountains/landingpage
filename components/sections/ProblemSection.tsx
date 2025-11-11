@@ -1,5 +1,6 @@
 import React from 'react';
 import { ProblemConfig } from '@/lib/types';
+import { cn } from '@/lib/utils';
 import Container from '@/components/ui/Container';
 
 export interface ProblemSectionProps extends ProblemConfig {
@@ -21,7 +22,7 @@ const ProblemSection: React.FC<ProblemSectionProps> = ({
     <section id={id} style={{ backgroundColor: 'var(--problem-bg)' }}>
       <Container maxWidth="xl">
         <div className="mx-auto">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-center text-primary">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-center text-[#FF9F1C] transition-colors duration-300 hover:text-primary">
             {title}
           </h2>
           
@@ -36,7 +37,10 @@ const ProblemSection: React.FC<ProblemSectionProps> = ({
             {examples.map((example, index) => (
               <div
                 key={index}
-                className="bg-[#080b0c] backdrop-blur-sm rounded-2xl p-8 md:p-10 border-2 border-white/10 hover:border-primary/60 transition-all duration-300 min-h-[200px] flex items-start hover:bg-[#080b0c]"
+                className={cn(
+                  "bg-[#080b0c] backdrop-blur-sm rounded-2xl p-8 md:p-10 border-2 border-white/10 transition-all duration-300 min-h-[200px] flex items-start hover:bg-[#080b0c]",
+                  index % 2 === 0 ? "hover:border-[#FF9F1C]/80" : "hover:border-[#2EC4B6]/80"
+                )}
               >
                 <p className="text-base md:text-lg leading-relaxed">
                   {example.text}
@@ -49,7 +53,9 @@ const ProblemSection: React.FC<ProblemSectionProps> = ({
           {closingText && (
             <div className="mt-12 p-10 md:p-14 rounded-2xl bg-[#080b0c] border border-white/10 text-center">
               <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-                <span className="text-primary">This isn&apos;t convenience.</span>
+                <span className="text-primary transition-colors duration-300 hover:text-[#FF9F1C]">
+                  This isn&apos;t convenience.
+                </span>
                 <br />
                 <span className="text-white">It&apos;s control.</span>
               </h3>

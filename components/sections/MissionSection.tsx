@@ -1,8 +1,14 @@
+'use client';
+
 import React from 'react';
+import Link from 'next/link';
 import { MissionConfig } from '@/lib/types';
 import Container from '@/components/ui/Container';
 import Card from '@/components/ui/Card';
 import IconWrapper from '@/components/ui/IconWrapper';
+import Button from '@/components/ui/Button';
+import { handleAnchorClick } from '@/lib/utils';
+import { ArrowRight } from 'lucide-react';
 
 export interface MissionSectionProps extends MissionConfig {
   id?: string;
@@ -64,6 +70,19 @@ const MissionSection: React.FC<MissionSectionProps> = ({
               </div>
             </Card>
           ))}
+        </div>
+
+        <div className="mt-14 flex justify-center">
+          <Link href="#contact" onClick={handleAnchorClick}>
+            <Button
+              variant="primary"
+              size="lg"
+              className="hero-cta group gap-3 px-8 md:px-10 shadow-lg hover:shadow-xl transition-all"
+            >
+              <span className="font-semibold">Book Demo</span>
+              <ArrowRight className="hero-cta__icon h-5 w-5" strokeWidth={2.25} />
+            </Button>
+          </Link>
         </div>
       </Container>
     </section>

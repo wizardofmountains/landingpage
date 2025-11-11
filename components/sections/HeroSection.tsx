@@ -6,6 +6,7 @@ import { HeroConfig } from '@/lib/types';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
 import { handleAnchorClick } from '@/lib/utils';
+import { ArrowRight } from 'lucide-react';
 
 export interface HeroSectionProps extends HeroConfig {
   id?: string;
@@ -52,8 +53,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         <div className="absolute inset-0 -z-10 bg-gradient-to-br from-accent/5 via-background to-background" />
       )}
       
-      <Container maxWidth="xl" className="py-20">
-        <div className="flex flex-col items-start text-left md:-ml-20"> {/* -ml-20 moves the text 30px to the left */}
+      <Container maxWidth="xl" className="py-20 px-6 md:px-8 lg:px-5">
+          <div className="flex flex-col items-start text-left md:-ml-20">
           <h1 className={`text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight max-w-6xl mb-8 leading-tight ${backgroundImage ? 'text-white drop-shadow-lg' : ''}`}>
             {parseHeadline(headline)}
           </h1>
@@ -65,8 +66,13 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           )}
           
           <Link href={ctaLink} onClick={handleAnchorClick}>
-            <Button variant="primary" size="lg" className="shadow-lg hover:shadow-xl transition-all">
-              {cta}
+            <Button
+              variant="primary"
+              size="lg"
+              className="hero-cta group gap-3 px-8 md:px-10 shadow-lg hover:shadow-xl transition-all"
+            >
+              <span className="font-semibold">{cta}</span>
+              <ArrowRight className="hero-cta__icon h-5 w-5" strokeWidth={2.25} />
             </Button>
           </Link>
         </div>
