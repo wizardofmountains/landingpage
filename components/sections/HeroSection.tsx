@@ -53,7 +53,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       )}
       
       <Container maxWidth="xl" className="py-20">
-        <div className="flex flex-col items-start text-left -ml-20"> {/* -ml-20 moves the text 30px to the left */}
+        <div className="flex flex-col items-start text-left md:-ml-20"> {/* -ml-20 moves the text 30px to the left */}
           <h1 className={`text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight max-w-6xl mb-8 leading-tight ${backgroundImage ? 'text-white drop-shadow-lg' : ''}`}>
             {parseHeadline(headline)}
           </h1>

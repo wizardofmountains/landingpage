@@ -19,7 +19,7 @@ export const siteConfig: SiteConfig = {
   name: "Element Foundation",
   tagline: "At Element, we believe that people should control the tech they bought and own.",
   description: "Element Foundation fights for consumer ownership rights in the digital age. Join us to reclaim control over the products you buy.",
-  url: "https://yoursite.com", // Update with your domain
+  url: "https://landingpage-lac-zeta.vercel.app", // Update with your domain
   
   // ==================== THEME COLORS ====================
   // Use Tailwind color names (e.g., 'blue', 'green', 'purple')
