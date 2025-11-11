@@ -51,7 +51,14 @@ const NewsletterSection: React.FC<NewsletterSectionProps> = ({
           {/* Klaviyo Embedded Form - Only render on client side */}
           {/* The Klaviyo SDK will automatically populate this div with your form */}
           {isMounted && (
-            <div className={`klaviyo-form-${klaviyoFormId}`}></div>
+            <>
+              <div className={`klaviyo-form-${klaviyoFormId}`}></div>
+              
+              {/* Required field notice */}
+              <p className="mt-4 text-sm text-gray-400">
+                <span className="text-red-500">*</span>Please complete this field to proceed.
+              </p>
+            </>
           )}
         </div>
       </Container>

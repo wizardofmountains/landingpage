@@ -31,25 +31,23 @@ const Header: React.FC<HeaderProps> = ({ logo, siteName, navigation }) => {
   
   return (
     <header>
-      {/* Floating Logo - Left Side */}
-      <div className="fixed top-6 left-6 md:left-8 z-50">
-        <Link 
-          href="/" 
-          className="flex items-center px-4 py-3 bg-black/40 backdrop-blur-md rounded-full border border-white/10 hover:bg-black/50 transition-all duration-300 shadow-lg hover:shadow-xl"
-        >
-          <Image
-            src={logo}
-            alt={`${siteName} logo`}
-            width={120}
-            height={40}
-            className="h-8 w-auto"
-            priority
-          />
-        </Link>
-      </div>
+      {/* Floating Logo - Left Side (Free-floating, no container) */}
+      <Link 
+        href="/" 
+        className="fixed top-6 left-8 md:left-10 z-50 transition-all duration-300 hover:opacity-80"
+      >
+        <Image
+          src={logo}
+          alt={`${siteName} logo`}
+          width={120}
+          height={40}
+          className="h-8 w-auto drop-shadow-lg"
+          priority
+        />
+      </Link>
 
       {/* Floating Navigation Menu - Right Side (Desktop) */}
-      <nav className="fixed top-6 center-6 md:right-8 z-50 hidden md:block">
+      <nav className="fixed top-6 right-6 md:right-8 z-50 hidden md:block">
         <div className="flex items-center gap-1 px-3 py-2 bg-black/40 backdrop-blur-md rounded-full border border-white/10 shadow-lg">
           {navigation.map((link, index) => (
             <Link

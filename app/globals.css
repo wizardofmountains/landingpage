@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  /* Base colors */
-  --background: #101619;
-  --foreground: #0f172a;
+  /* Base colors - Using dark mode colors for all themes */
+  --background: #0f1517;
+  --foreground: #ededed;
   
   /* Brand colors - easily customizable */
   --primary: #2ec4b6;
@@ -13,14 +13,15 @@
   --accent: #2ec4b6;
   --accent-foreground: #ffffff;
   
-  /* Additional colors */
-  --muted: #f1f5f9;
-  --muted-foreground: #64748b;
-  --border: #e2e8f0;
-  --input: #e2e8f0;
-  --ring: #3b82f6;
-  --problem-bg: #101619;
-  --newsletter-bg: #101619;
+  /* Additional colors - Using dark mode colors */
+  --muted: #1e293b;
+  --muted-foreground: #94a3b8;
+  --border: #334155;
+  --input: #334155;
+  --ring: #2ec4b6;
+  --problem-bg: #0f1517;
+  --newsletter-bg: #0f1517;
+  --card-bg: #080b0c;
 }
 
 @theme inline {
@@ -48,19 +49,6 @@
   --font-mono: var(--font-geist-mono);
 }
 
-/* Optional: Dark mode support - remove if not needed */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --primary: #2ec4b6;          /* Same teal color for dark mode */
-    --primary-foreground: #ffffff;
-    --muted: #1e293b;
-    --muted-foreground: #94a3b8;
-    --border: #334155;
-  }
-}
-
 /* Base styles */
 body {
   background: var(--background);
@@ -86,13 +74,7 @@ h1, h2, h3, h4, h5, h6 {
   outline-offset: 2px;
 }
 
-/* Tighter spacing */
-section {
-  padding-top: 3rem !important;
-  padding-bottom: 3rem !important;
-}
-
-/* Or more spacious */
+/* Section spacing */
 section {
   padding-top: 8rem !important;
   padding-bottom: 8rem !important;
