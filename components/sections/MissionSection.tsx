@@ -42,12 +42,12 @@ const MissionSection: React.FC<MissionSectionProps> = ({
     >
       <Container maxWidth="xl">
         <div className="max-w-4xl mx-auto mb-16 text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+          <h2 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
             {title}
           </h2>
           
           {intro && (
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+            <p className="text-white opacity-90 text-lg md:text-xl leading-relaxed">
               {intro}
             </p>
           )}
@@ -83,7 +83,7 @@ const MissionSection: React.FC<MissionSectionProps> = ({
                 </h3>
                 
                 {/* Description */}
-                <p className="text-base text-muted-foreground leading-relaxed">
+                <p className="text-white opacity-90 text-base leading-relaxed">
                   {pillar.description}
                 </p>
               </div>

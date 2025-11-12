@@ -27,7 +27,7 @@ const ProblemSection: React.FC<ProblemSectionProps> = ({
           </h2>
           
           {intro && (
-            <p className="text-lg md:text-xl mb-12 text-center opacity-90 max-w-3xl mx-auto">
+            <p className="text-white opacity-90 text-lg md:text-xl mb-12 text-center max-w-3xl mx-auto">
               {intro}
             </p>
           )}
@@ -42,7 +42,7 @@ const ProblemSection: React.FC<ProblemSectionProps> = ({
                   index % 2 === 0 ? "hover:border-[#FF9F1C]/80" : "hover:border-[#2EC4B6]/80"
                 )}
               >
-                <p className="text-base md:text-lg leading-relaxed">
+                <p className="text-white opacity-90 text-base md:text-lg leading-relaxed">
                   {example.text}
                 </p>
               </div>
@@ -59,7 +59,7 @@ const ProblemSection: React.FC<ProblemSectionProps> = ({
                 <br />
                 <span className="text-white">It&apos;s control.</span>
               </h3>
-              <p className="text-base md:text-lg lg:text-xl leading-relaxed text-gray-300 max-w-4xl mx-auto">
+              <p className="text-white opacity-90 text-base md:text-lg lg:text-xl leading-relaxed max-w-4xl mx-auto">
                 And it&apos;s creeping into every part of our digital lives, one &quot;update&quot; at a time. If we don&apos;t act now, we risk locking future generations into a world where everything is leased, nothing is owned, and the power lies in the hands of companies, not consumers.
               </p>
             </div>

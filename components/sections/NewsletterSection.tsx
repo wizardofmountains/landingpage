@@ -45,7 +45,7 @@ const NewsletterSection: React.FC<NewsletterSectionProps> = ({
           )}
           
           {description && (
-            <p className="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed">
+            <p className="text-white opacity-90 text-lg md:text-xl mb-10 leading-relaxed">
               {description}
             </p>
           )}
@@ -57,8 +57,8 @@ const NewsletterSection: React.FC<NewsletterSectionProps> = ({
               <div className={`klaviyo-form-${klaviyoFormId}`}></div>
 
               {/* Required field notice */}
-              <p className="mt-4 text-sm text-gray-400">
-                <span className="text-red-500">*</span>Please complete this field to proceed.
+              <p className="mt-2 text-md text-white opacity-70">
+                <span className="text-white">*</span>Please complete this field to proceed.
               </p>
             </>
           )}
