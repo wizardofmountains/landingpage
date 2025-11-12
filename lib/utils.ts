@@ -24,10 +24,21 @@ export function smoothScrollTo(elementId: string) {
  */
 export function handleAnchorClick(e: React.MouseEvent<HTMLAnchorElement>) {
   const href = e.currentTarget.getAttribute('href');
-  if (href?.startsWith('#')) {
+  if (!href) {
+    return;
+  }
+
+  const hashIndex = href.indexOf('#');
+  if (hashIndex !== -1) {
+    const elementId = href.slice(hashIndex + 1).trim();
+    if (!elementId) {
+      return;
+    }
+
     e.preventDefault();
-    const elementId = href.substring(1);
     smoothScrollTo(elementId);
+    // Update the hash to mirror default anchor behaviour
+    history.replaceState(null, '', `#${elementId}`);
   }
 }
 
