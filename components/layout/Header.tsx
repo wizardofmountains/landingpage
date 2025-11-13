@@ -41,7 +41,7 @@ const Header: React.FC<HeaderProps> = ({ logo, siteName, navigation }) => {
           alt={`${siteName} logo`}
           width={120}
           height={40}
-          className="h-8 w-auto drop-shadow-lg"
+          className="h-15 w-auto drop-shadow-lg"
           priority
         />
       </Link>

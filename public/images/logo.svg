@@ -1,6 +1,68 @@
-<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- FULU Logo Placeholder -->
-  <rect width="120" height="40" rx="4" fill="#0f172a"/>
-  <text x="60" y="26" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">FULU</text>
-</svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_2" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 208.5 241.67">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8 {
+        fill: none;
+        stroke-miterlimit: 10;
+        stroke-width: 15px;
+      }
 
+      .cls-1, .cls-6, .cls-7, .cls-8 {
+        stroke: #46b9b0;
+      }
+
+      .cls-2 {
+        stroke: #fff;
+      }
+
+      .cls-3 {
+        stroke-dasharray: 0 19.8;
+      }
+
+      .cls-3, .cls-4, .cls-5 {
+        stroke: #f59d27;
+        stroke-linecap: round;
+      }
+
+      .cls-4 {
+        stroke-dasharray: 0 19.8;
+      }
+
+      .cls-6 {
+        stroke-dasharray: 14.83 9.88;
+      }
+
+      .cls-7 {
+        stroke-dasharray: 14.83 9.88;
+      }
+
+      .cls-8 {
+        stroke-dasharray: 14.82 9.88;
+      }
+    </style>
+  </defs>
+  <g id="Logo">
+    <g>
+      <polyline class="cls-1" points="110.03 12.41 103.54 8.66 97.04 12.41"/>
+      <line class="cls-8" x1="88.48" y1="17.35" x2="28.57" y2="51.94"/>
+      <polyline class="cls-1" points="24.29 54.41 17.79 58.16 24.29 61.91"/>
+      <line class="cls-6" x1="32.85" y1="66.85" x2="92.76" y2="101.45"/>
+      <polyline class="cls-1" points="97.04 103.92 103.54 107.67 110.03 103.92"/>
+      <line class="cls-7" x1="118.59" y1="98.98" x2="178.5" y2="64.39"/>
+      <polyline class="cls-1" points="182.78 61.91 189.28 58.16 182.78 54.41"/>
+      <line class="cls-7" x1="174.23" y1="49.47" x2="114.31" y2="14.88"/>
+    </g>
+    <polygon class="cls-2" points="7.51 80.16 93.25 129.67 93.25 228.68 7.5 179.17 7.51 80.16"/>
+    <g>
+      <line class="cls-5" x1="200.99" y1="80.16" x2="200.99" y2="80.16"/>
+      <line class="cls-3" x1="183.84" y1="90.07" x2="123.82" y2="124.72"/>
+      <line class="cls-5" x1="115.25" y1="129.67" x2="115.25" y2="129.67"/>
+      <line class="cls-3" x1="115.25" y1="149.47" x2="115.25" y2="218.78"/>
+      <line class="cls-5" x1="115.25" y1="228.68" x2="115.25" y2="228.68"/>
+      <line class="cls-4" x1="132.4" y1="218.78" x2="192.42" y2="184.12"/>
+      <line class="cls-5" x1="201" y1="179.17" x2="201" y2="179.17"/>
+      <line class="cls-3" x1="201" y1="159.37" x2="200.99" y2="90.07"/>
+    </g>
+  </g>
+</svg>
