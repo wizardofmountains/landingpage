@@ -55,7 +55,7 @@ export default function RootLayout({
         className={`${montserrat.variable} antialiased`}
       >
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-XTFY1KDWXG"
+          async src="https://www.googletagmanager.com/gtag/js?id=G-XTFY1KDWXG"
           strategy="afterInteractive"
         />
         <Script id="gtag-init" strategy="afterInteractive">
