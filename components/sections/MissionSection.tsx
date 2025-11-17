@@ -98,7 +98,7 @@ const MissionSection: React.FC<MissionSectionProps> = ({
               size="lg"
               className="hero-cta group gap-3 px-8 md:px-10 shadow-lg hover:shadow-xl transition-all"
             >
-              <span className="font-semibold">Book Demo</span>
+              <span className="font-semibold">Get a Demo</span>
               <ArrowRight className="hero-cta__icon h-5 w-5" strokeWidth={2.25} />
             </Button>
           </Link>

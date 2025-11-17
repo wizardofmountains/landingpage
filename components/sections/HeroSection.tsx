@@ -55,7 +55,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       
       <Container maxWidth="xl" className="py-20 px-6 md:px-8 lg:px-5">
           <div className="flex flex-col items-start text-left md:-ml-20">
-          <h1 className={`text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight max-w-6xl mb-8 leading-tight ${backgroundImage ? 'text-white drop-shadow-lg' : ''}`}>
+          <h1 
+            className={`font-bold tracking-tight max-w-6xl mb-8 leading-tight ${backgroundImage ? 'text-white drop-shadow-lg' : ''}`}
+            style={{ fontSize: '80px' }}
+          >
             {parseHeadline(headline)}
           </h1>
           

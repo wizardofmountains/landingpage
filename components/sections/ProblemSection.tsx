@@ -57,10 +57,11 @@ const ProblemSection: React.FC<ProblemSectionProps> = ({
                   This isn&apos;t convenience.
                 </span>
                 <br />
-                <span className="text-white">It&apos;s control.</span>
+                <span className="text-white">It&apos;s loss.</span>
               </h3>
               <p className="text-white opacity-90 text-base md:text-lg lg:text-xl leading-relaxed max-w-4xl mx-auto">
-                And it&apos;s creeping into every part of our digital lives, one &quot;update&quot; at a time. If we don&apos;t act now, we risk locking future generations into a world where everything is leased, nothing is owned, and the power lies in the hands of companies, not consumers.
+                The problem is not that there are no solutions. It&apos;s that you don&apos;t have access to them. The world doesn’t lack resources.
+                It lacks systems that let us use them wisely.
               </p>
             </div>
           )}

@@ -17,8 +17,8 @@ import { SiteConfig } from '@/lib/types';
 export const siteConfig: SiteConfig = {
   // ==================== BRAND & METADATA ====================
   name: "Element",
-  tagline: "At Element, we believe that people should control the materials they use.", // Update tagline
-  description: "Element ...", // Update description
+  tagline: "At Element we believe that the future of building begins with the courage to rethink resources.",
+  description: "Element is a platform for future-proof building design that focuses on essential issues relating to resource-efficient construction and future-proof value creation.",
   url: "https://landingpage-lac-zeta.vercel.app", // Update with your domain
   
   // ==================== THEME COLORS ====================
@@ -42,12 +42,12 @@ export const siteConfig: SiteConfig = {
     { label: "Get Involved", href: "#join-element" },
     { label: "Products", href: "#products" },
     { label: "Material Wiki", href: "#material-wiki" },
-    { label: "Element Bounties", href: "#" }, // Finalize label and link
+    { label: "Element Bounties", href: "#element-bounties" },
   ],  
   
   // ==================== HERO SECTION ====================
   hero: {
-    headline: "At Element, we believe that people should control the materials they use.", // Update headline
+    headline: "At Element we believe that the future of building begins with the courage to rethink resources.",
     subheadline: "", // Optional subheadline
     cta: "Get Involved",
     ctaLink: "#join-movement",
@@ -57,41 +57,41 @@ export const siteConfig: SiteConfig = {
   // ==================== PROBLEM/CHALLENGE SECTION ====================
   // Describe the problem your organization addresses
   problem: {
-    title: "The Problem", // Update title
-    intro: "Kurzes Intro zum generellen Problem das besteht und auf welches sich Element konzentriert.", // Update intro
+    title: "The Problem",
+    intro: "Every day, valuable materials disappear, digital tools fall short, and decisions are made without clarity. The construction industry is full of potential, yet restricted by systems that no longer match the world we build for.",
     examples: [
-      { text: "Problem 1" }, // Update examples
-      { text: "Problem 2" },
-      { text: "Problem 3" },
+      { text: "You want to use secondary materials, but the information is missing. No clear data, no availability, no security." },
+      { text: "Every research task takes hours. Material passports are incomplete, databases are chaotic, tools are not connected." },
+      { text: "High-quality material ends up in the container at the construction site. You see potential, but the system sees waste." },
     ],
-    closingText: "This isn't convenience. It's control. And it's creeping into every part of our digital lives, one \"update\" at a time. If we don't act now, we risk locking future generations into a world where everything is leased, nothing is owned, and the power lies in the hands of companies, not consumers.", // Update closing text
+    closingText: "This isn't convenience. It's loss. The problem is not that there are no solutions. It's that you don't have access to them. The world doesn’t lack resources. It lacks systems that let us use them wisely.",
   },
   
   // ==================== MISSION/PILLARS SECTION ====================
   // Describe your organization's approach with 3-4 key pillars
   mission: {
-    title: "Element's Mission", // Update title
-    intro: "Kurzes Intro zur Mission von Element und was wir tun. Vorbild der FULU Seite.", // Update intro
+    title: "Element's Mission",
+    intro: "Element tackles the areas where the biggest gaps currently exist: we make raw material flows visible, accessible, and intuitively usable. Together with a growing community, we are creating a new building culture: curious, reflective, and future-proof.",
     pillars: [
       {
-        title: "Mission 1",
-        description: "We research and document companies' anti-ownership practices. Whether it's digital locks, legal threats, or privacy violations, we pull back the curtain and make the truth public.",
-        icon: "Search", // Lucide icon name
+        title: "Transparency",
+        description: "We illuminate material flows, lifecycles and potentials and bring this knowledge directly into the planning environment.",
+        icon: "Search",
       },
       {
-        title: "Mission 2",
-        description: "We translate complex laws, policy concepts, and technical barriers into accessible stories and ideas that people can understand. We empower users with knowledge through YouTube, the Consumer Rights Wiki, and our newsletter.",
-        icon: "BookOpen",
-      },
-      {
-        title: "Mission 3",
-        description: "We build coalitions. Whether you're a fixer, a farmer, a gamer, an activist—or you just own an internet-connected refrigerator—your ownership rights are under attack. Bringing our voices together is the best way to make sure they're heard.",
+        title: "Community",
+        description: "Our community connects planners, suppliers, researchers and creatives. A space for open exchange, shared learning and collective progress.",
         icon: "Users",
       },
       {
-        title: "Mission 4",
-        description: "We support legal and legislative efforts to replace anti-consumer laws with ones that protect our right to own the devices and media that we bought.",
-        icon: "Scale",
+        title: "Ecosystem",
+        description: "A living ecosystem of material passports, a marketplace for secondary resources, and a knowledge hub that bridges physical materials and digital workflows.",
+        icon: "Leaf",
+      },
+      {
+        title: "Tools",
+        description: "A BIM-integrated suite with calculator, simulator, visualizer, AR insights and intelligent assistants. Practical, precise, and designed to make sustainable planning both effortless and inspiring.",
+        icon: "PenTool",
       },
     ],
   },
@@ -99,7 +99,7 @@ export const siteConfig: SiteConfig = {
   // ==================== NEWSLETTER SIGNUP SECTION ====================
   newsletter: {
     title: "Sign Up for News",
-    description: "Want to know when it's time to act? Join the movement to put power back in the hands of consumers. Sign up to get no-spam alerts about campaigns, legislation, and actions you can take to protect ownership rights.",
+    description: "Join a movement that is rethinking construction. Sign up to get no-spam alerts about insights, concrete examples, experiments, ideas, and early invitations to beta releases. Become part of Element's community.",
     klaviyoFormId: "WRssM3", // Your Klaviyo embedded form ID - customize form in Klaviyo dashboard
   },
   
