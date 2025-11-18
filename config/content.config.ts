@@ -42,7 +42,7 @@ export const siteConfig: SiteConfig = {
     { label: "Get Involved", href: "#join-element" },
     { label: "Products", href: "#products" },
     { label: "Material Wiki", href: "#material-wiki" },
-    { label: "Element Bounties", href: "#element-bounties" },
+    { label: "Community", href: "#community" },
   ],  
   
   // ==================== HERO SECTION ====================
