@@ -49,7 +49,7 @@ export const siteConfig: SiteConfig = {
   hero: {
     headline: "At Element we believe that the future of building begins with the courage to rethink resources.",
     subheadline: "", // Optional subheadline
-    cta: "Learn More",
+    cta: "Sign Up Now",
     ctaLink: "#join-movement",
     backgroundImage: "/images/hero-bg.jpg", // Path to your background image (or remove/empty for gradient)
   },
