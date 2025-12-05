@@ -49,7 +49,7 @@ export const siteConfig: SiteConfig = {
   hero: {
     headline: "At Element we believe that the future of building begins with the courage to rethink resources.",
     subheadline: "", // Optional subheadline
-    cta: "Get Involved",
+    cta: "Learn More",
     ctaLink: "#join-movement",
     backgroundImage: "/images/hero-bg.jpg", // Path to your background image (or remove/empty for gradient)
   },
@@ -98,8 +98,8 @@ export const siteConfig: SiteConfig = {
   
   // ==================== NEWSLETTER SIGNUP SECTION ====================
   newsletter: {
-    title: "Sign Up for News",
-    description: "Join a movement that is rethinking construction. Sign up to get no-spam alerts about insights, concrete examples, experiments, ideas, and early invitations to beta releases. Become part of Element's community.",
+    title: "Get exclusive insights",
+    description: "Join a community that is rethinking construction. Sign up to get no-spam alerts about insights, ideas, concrete examples and early invitations to beta releases. Become part of Element's community.",
     klaviyoFormId: "WRssM3", // Your Klaviyo embedded form ID - customize form in Klaviyo dashboard
   },
   
